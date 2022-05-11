@@ -16,7 +16,7 @@
         <tr>
             <th>{{$genero->id}}</th>
             <th>{{$genero->nome}}</th>
-            <th>
+            <th class="d-flex">
             <form action="{{route('admin.generos.destroy', $genero->id)}}" method="POST">
               @csrf
               @method('DELETE')
@@ -27,7 +27,7 @@
                 </svg></span>
                 </button>
               </form>
-                
+
               <a href="{{route('admin.generos.edit', $genero->id)}}">
                 <span class="btn btn-primary">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
